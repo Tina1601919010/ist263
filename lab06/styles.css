@@ -1,0 +1,18 @@
+selector {
+    font-family: Arial, Helvetica, sans-serif
+}
+
+h1, h2 {
+    color:darkgrey;
+}
+
+.evenrow{
+    background-color: #fffff0;
+}
+
+h1 {
+    font-size: 2em;
+}
+h2 {
+    font-size: 1.5em;
+}
