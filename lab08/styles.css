@@ -1,0 +1,64 @@
+body {
+    background-color: #ffcad4;
+    color: #7209b7;
+}
+
+a {
+    color: #9b5de5;
+}
+
+h1, h2, h3 {
+    color: #3c096c;
+}
+
+nav {
+    background-color: #ff99c8;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+nav a {
+    color: #a53860;
+}
+
+nav a:hover {
+    background-color: #da627d;
+}
+
+nav {
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+nav a {
+    color: #720026;
+}
+
+nav a:hover {
+    background-color: #660b01;
+}
+
+.float-right {
+    float: right;
+    margin-left: 20px;
+}
+
+.row1, .row2 {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.col1, .col2 {
+    flex: 1;
+    padding: 10px;
+}
+
+.col1, .col2 {
+    background-color: #ff99c8;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.evenrow {
+    background-color: #ff99c8;
+}
