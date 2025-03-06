@@ -18,24 +18,13 @@ nav {
 }
 
 nav a {
-    color: #a53860;
-}
-
-nav a:hover {
-    background-color: #da627d;
-}
-
-nav {
-    padding: 10px;
-    margin-bottom: 30px;
-}
-
-nav a {
     color: #720026;
 }
 
 nav a:hover {
     background-color: #660b01;
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .float-right {
@@ -43,17 +32,14 @@ nav a:hover {
     margin-left: 20px;
 }
 
-.row1, .row2 {
+.row {
     display: flex;
     margin-bottom: 20px;
 }
 
-.col1, .col2 {
+.col {
     flex: 1;
     padding: 10px;
-}
-
-.col1, .col2 {
     background-color: #ff99c8;
     border-radius: 10px;
     margin: 10px;
