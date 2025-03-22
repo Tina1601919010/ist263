@@ -40,7 +40,6 @@ nav a:hover {
     margin-left: 20px;
 }
 
-/* Flexbox for Icons */
 .flexbox-2 {
     display: flex;
     gap: 20px;
@@ -50,21 +49,26 @@ nav a:hover {
 .icon-row {
     display: flex;
     justify-content: space-between;
-    flex: 3; /* 75% of the page */
+    flex: 3; 
     gap: 10px;
 }
 
 .icon-row div {
     text-align: center;
     background-color: #ff99c8;
-    padding: 10px;
+    padding: 20px;
     border-radius: 10px;
     flex: 1;
 }
 
-/* Aside for Other Skills */
+.icon-row i {
+    font-size: 50px; 
+    color: #3c096c;
+    margin-bottom: 10px;
+}
+
 aside {
-    flex: 1; /* 25% of the page */
+    flex: 1; 
     background-color: #ff99c8;
     padding: 20px;
     border-radius: 10px;
