@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Text</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .small {
+            background-color: #00b4d8;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+        
+        .large {
+            background-color: #d90429;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+
+        @media (max-width: 800px) {
+            .large {
+                display: none;
+            }
+        }
+
+        @media (min-width: 801px) {
+            .small {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="small">I’m small (with a blue background)</div>
+    <div class="large">I’m large. (with a red background)</div>
+</body>
+</html>
