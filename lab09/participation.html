@@ -3,37 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Text</title>
+    <title>Responsive Background</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            padding: 20px;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         
-        .small {
-            background-color: #00b4d8;
+        .small, .large {
             color: white;
-            padding: 20px;
             font-size: 24px;
-        }
-        
-        .large {
-            background-color: #d90429;
-            color: white;
-            padding: 20px;
-            font-size: 24px;
+            font-weight: bold;
         }
 
-        @media (max-width: 800px) {
-            .large {
-                display: none;
-            }
+        /* Default: Small screen (blue background) */
+        body {
+            background-color: blue;
+        }
+
+        .large {
+            display: none;
         }
 
         @media (min-width: 801px) {
+            /* Large screen (red background) */
+            body {
+                background-color: red;
+            }
+
             .small {
                 display: none;
+            }
+
+            .large {
+                display: block;
             }
         }
     </style>
