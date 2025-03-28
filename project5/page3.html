@@ -12,27 +12,32 @@
             margin: 0;
             padding: 20px;
         }
+        
         .navbar {
             display: flex;
             gap: 15px;
             background-color: #0f3460;
             padding: 10px;
         }
+        
         .navbar a {
             text-decoration: none;
             color: white;
             padding: 10px 15px;
+            transition: background-color 0.3s ease;
         }
+        
         .navbar a:hover {
             background-color: #e94560;
-            color: black;
         }
+        
         h1 {
             color: #e94560;
             margin-top: 20px;
             text-align: center;
             font-size: 2.5em;
         }
+        
         .intro {
             text-align: center;
             margin-bottom: 40px;
@@ -42,17 +47,14 @@
             margin-left: auto;
             margin-right: auto;
         }
-        .active {
-            font-weight: bold;
-            background-color: #e94560;
-            color: black !important;
-        }
+        
         .section-title {
             color: #e94560;
             text-align: center;
             margin: 40px 0 20px;
             font-size: 1.8em;
         }
+        
         .image-container {
             max-width: 600px;
             margin: 0 auto 40px;
@@ -61,15 +63,18 @@
             overflow: hidden;
             border-radius: 8px;
         }
+        
         .image-container img {
             width: 100%;
             height: 300px;
             object-fit: cover;
             transition: transform 0.3s;
         }
+        
         .image-container:hover img {
             transform: scale(1.03);
         }
+        
         .image-description {
             position: absolute;
             bottom: 0;
@@ -80,14 +85,17 @@
             transform: translateY(100%);
             transition: transform 0.3s;
         }
+        
         .image-container.active .image-description {
             transform: translateY(0);
         }
+        
         .tips-list {
             max-width: 600px;
             margin: 40px auto;
             padding-left: 20px;
         }
+        
         .tips-list li {
             margin-bottom: 15px;
             line-height: 1.6;
@@ -98,7 +106,7 @@
     <div class="navbar">
         <a href="index.html">Home</a>
         <a href="page2.html">Page 2</a>
-        <a href="page3.html" class="active">Page 3</a>
+        <a href="page3.html">Page 3</a>
     </div>
     
     <h1>HOW TO PLAY LOVE AND DEEP SPACE</h1>
@@ -106,7 +114,7 @@
     
     <h2 class="section-title">MISSIONS & BATTLES</h2>
     <div class="image-container" onclick="toggleDescription(this)">
-        <img src="image3.jpg" alt="Combat Scene">
+        <img src="image3.png" alt="Combat Scene">
         <div class="image-description">
             Take on thrilling missions as a Deep Space Hunter, battling mysterious "Wanderers" from the far reaches of the galaxy. Engage in real-time combat with stunning "Co-op Skills" alongside your companions, where seamless animations and dynamic interactions heighten the excitement.
         </div>
@@ -114,7 +122,7 @@
     
     <h2 class="section-title">RELATIONSHIP-BUILDING</h2>
     <div class="image-container" onclick="toggleDescription(this)">
-        <img src="image2.jpg" alt="Romantic Scene">
+        <img src="image4.JPG" alt="Romantic Scene">
         <div class="image-description">
             Beyond combat, deepen your bonds with the male protagonists through immersive 3D interactions, daily companionships, and personalized storylines. Every choice influences the direction of your relationships, creating unique romantic arcs filled with emotional highs and lows.
         </div>
@@ -122,7 +130,7 @@
     
     <h2 class="section-title">CHARACTER CUSTOMIZATION</h2>
     <div class="image-container" onclick="toggleDescription(this)">
-        <img src="image3.jpg" alt="Customization Screen">
+        <img src="image5.JPG" alt="Customization Screen">
         <div class="image-description">
             Express yourself with a high level of customization, including detailed avatar creation and personalized voice options, allowing you to truly inhabit your role in this universe.
         </div>
@@ -137,7 +145,6 @@
 
     <script>
         function toggleDescription(element) {
-
             const allContainers = document.querySelectorAll('.image-container');
             allContainers.forEach(container => {
                 if (container !== element) {

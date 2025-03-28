@@ -12,61 +12,67 @@
             margin: 0;
             padding: 20px;
         }
+        
         .navbar {
             display: flex;
             gap: 15px;
             background-color: #0f3460;
             padding: 10px;
         }
+        
         .navbar a {
             text-decoration: none;
             color: white;
             padding: 10px 15px;
+            transition: background-color 0.3s ease;
         }
+        
         .navbar a:hover {
             background-color: #e94560;
-            color: black;
         }
+        
         .character-container {
             display: flex;
             flex-direction: column;
             gap: 30px;
             margin-top: 20px;
         }
+        
         .character {
             display: flex;
             gap: 20px;
             align-items: flex-start;
         }
+        
         .character img {
             width: 150px;
             height: auto;
             border-radius: 8px;
         }
+        
         .character-info {
             flex: 1;
         }
+        
         h1 {
             color: #e94560;
             margin-top: 20px;
             text-align: center;
             font-size: 2.5em;
         }
+        
         h2 {
             color: #e94560;
             margin-bottom: 10px;
         }
+        
         .intro {
             text-align: center;
             margin-bottom: 40px;
             font-size: 1.1em;
             line-height: 1.6;
         }
-        .active {
-            font-weight: bold;
-            background-color: #e94560;
-            color: black !important;
-        }
+        
         .character-title {
             font-style: italic;
             color: #a8a8c0;
@@ -77,7 +83,7 @@
 <body>
     <div class="navbar">
         <a href="index.html">Home</a>
-        <a href="page2.html" class="active">Page 2</a>
+        <a href="page2.html">Page 2</a>
         <a href="page3.html">Page 3</a>
     </div>
     
