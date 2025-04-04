@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shell Game</title>
+    <link rel="stylesheet" href="../styles/animate.css">
+    <style>
+        .container {
+            display: flex;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        img {
+            width: 100px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+    <script>
+        function WinnerMessage() {
+            alert("You Won!");
+        }
+        
+        function TryAgain() {
+            alert("Wrong Shell - Try Again");
+        }
+        
+        function ShuffleShells() {
+            let shells = [1, 2, 3];
+            shells = shells.sort(() => Math.random() - 0.5);
+            
+            document.getElementById("first").style.order = shells[0];
+            document.getElementById("second").style.order = shells[1];
+            document.getElementById("third").style.order = shells[2];
+        }
+    </script>
+</head>
+<body onload="ShuffleShells();">
+    <h1>Choose a Walnut</h1>
+    <div class="container">
+        <img src="walnut.png" alt="first walnut" id="first" onclick="WinnerMessage();">
+        <img src="walnut.png" alt="second walnut" id="second" onclick="TryAgain();">
+        <img src="walnut.png" alt="third walnut" id="third" onclick="TryAgain();">
+    </div>
+</body>
+</html>

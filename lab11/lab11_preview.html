@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shell Game</title>
+    <link rel="stylesheet" href="../styles/animate2.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+        }
+        img {
+            width: 120px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        img:hover {
+            transform: scale(1.1);
+        }
+        #message {
+            font-size: 24px;
+            font-weight: bold;
+            min-height: 40px;
+            margin: 20px 0;
+            color: #2c3e50;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body onload="initGame();">
+    <h1>Find the Pea Under the Walnut!</h1>
+    <div class="container">
+        <img src="walnut.png" alt="first walnut" id="first" onclick="checkShell(1);">
+        <img src="walnut.png" alt="second walnut" id="second" onclick="checkShell(2);">
+        <img src="walnut.png" alt="third walnut" id="third" onclick="checkShell(3);">
+    </div>
+    <div id="message"></div>
+    <button onclick="resetGame();">Play Again</button>
+
+    <script>
+        let winningShell;
+        
+        function initGame() {
+            winningShell = Math.floor(Math.random() * 3) + 1;
+            shuffleShells();
+        }
+        
+        function shuffleShells() {
+            let shells = [1, 2, 3];
+            shells = shells.sort(() => Math.random() - 0.5);
+            
+            document.getElementById("first").style.order = shells[0];
+            document.getElementById("second").style.order = shells[1];
+            document.getElementById("third").style.order = shells[2];
+        }
+        
+        function checkShell(shellNumber) {
+            const messageEl = document.getElementById("message");
+            const shellEl = document.getElementById(
+                shellNumber === 1 ? "first" : 
+                shellNumber === 2 ? "second" : "third"
+            );
+            
+            document.querySelectorAll('.container img').forEach(img => {
+                img.classList.remove('animate-shell');
+            });
+            
+            shellEl.classList.add('animate-shell');
+            
+            if (shellNumber === winningShell) {
+                messageEl.innerHTML = "🎉 You Found the Pea! You Win! 🎉";
+                messageEl.style.color = "#27ae60";
+            } else {
+                messageEl.innerHTML = "😞 Wrong Shell! Try Again!";
+                messageEl.style.color = "#e74c3c";
+            }
+        }
+        
+        function resetGame() {
+            document.getElementById("message").innerHTML = "";
+            initGame();
+        }
+    </script>
+</body>
+</html>
