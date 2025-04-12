@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Lab 12 Slideshow</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function PlanetsOff() {
+            const planets = ['mercury', 'venus', 'earth', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune'];
+            for (let p of planets) {
+                document.getElementById(p).style.display = 'none';
+                document.getElementById(p + 'info').style.display = 'none';
+            }
+        }
+
+        function showMercury() {
+            document.getElementById('mercury').style.display = 'block';
+            document.getElementById('mercuryinfo').style.display = 'block';
+        }
+
+        function showVenus() {
+            document.getElementById('venus').style.display = 'block';
+            document.getElementById('venusinfo').style.display = 'block';
+        }
+
+        function showEarth() {
+            document.getElementById('earth').style.display = 'block';
+            document.getElementById('earthinfo').style.display = 'block';
+        }
+
+        function showMars() {
+            document.getElementById('mars').style.display = 'block';
+            document.getElementById('marsinfo').style.display = 'block';
+        }
+
+        function showJupiter() {
+            document.getElementById('jupiter').style.display = 'block';
+            document.getElementById('jupiterinfo').style.display = 'block';
+        }
+
+        function showSaturn() {
+            document.getElementById('saturn').style.display = 'block';
+            document.getElementById('saturninfo').style.display = 'block';
+        }
+
+        function showUranus() {
+            document.getElementById('uranus').style.display = 'block';
+            document.getElementById('uranusinfo').style.display = 'block';
+        }
+
+        function showNeptune() {
+            document.getElementById('neptune').style.display = 'block';
+            document.getElementById('neptuneinfo').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+<div id="slideshow-container">
+    <div id="bigimages">
+        <img src="../images/mecury.jpg" alt="mercury" id="mercury">
+        <img src="../images/venus.jpg" alt="venus" id="venus">
+        <img src="../images/earth.jpg" alt="earth" id="earth">
+        <img src="../images/mars.jpg" alt="mars" id="mars">
+        <img src="../images/jupiter.jpg" alt="jupiter" id="jupiter">
+        <img src="../images/saturn.jpg" alt="saturn" id="saturn">
+        <img src="../images/uranus.jpg" alt="uranus" id="uranus">
+        <img src="../images/neptune.jpg" alt="neptune" id="neptune">
+    </div>
+    <div id="planetinfo">        
+        <h1>Planets Slideshow</h1>
+        <div id="mercuryinfo">
+            <h2>Mercury</h2>
+            <p>Mercury is the smallest and innermost planet in the Solar System. Its orbit around the Sun takes 87.97 Earth days...</p>
+        </div>
+        <div id="venusinfo">
+            <h2>Venus</h2>
+            <p>Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty...</p>
+        </div>
+        <div id="earthinfo">
+            <h2>Earth</h2>
+            <p>Earth is the third planet from the Sun and the only astronomical object known to harbor life...</p>
+        </div>
+        <div id="marsinfo">
+            <h2>Mars</h2>
+            <p>Mars is a terrestrial planet with a thin atmosphere, with surface features reminiscent of the impact craters...</p>
+        </div>
+        <div id="jupiterinfo">
+            <h2>Jupiter</h2>
+            <p>Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant...</p>
+        </div>
+        <div id="saturninfo">
+            <h2>Saturn</h2>
+            <p>Saturn is the sixth planet from the Sun and the second-largest in the Solar System, after Jupiter...</p>
+        </div>
+        <div id="uranusinfo">
+            <h2>Uranus</h2>
+            <p>Uranus is the seventh planet from the Sun. Its name is a reference to the Greek god of the sky, Uranus...</p>
+        </div>
+        <div id="neptuneinfo">
+            <h2>Neptune</h2>
+            <p>Neptune is the eighth and farthest-known Solar planet from the Sun...</p>
+        </div>
+    </div>
+    <div id="thumbnails">
+        <img src="../images/mecury.jpg" alt="mercury" id="mercurythumb" onclick="PlanetsOff(); showMercury();">
+        <img src="../images/venus.jpg" alt="venus" id="venusthumb" onclick="PlanetsOff(); showVenus();">
+        <img src="../images/earth.jpg" alt="earth" id="earththumb" onclick="PlanetsOff(); showEarth();">
+        <img src="../images/mars.jpg" alt="mars" id="marsthumb" onclick="PlanetsOff(); showMars();">
+        <img src="../images/jupiter.jpg" alt="jupiter" id="jupiterthumb" onclick="PlanetsOff(); showJupiter();">
+        <img src="../images/saturn.jpg" alt="saturn" id="saturnthumb" onclick="PlanetsOff(); showSaturn();">
+        <img src="../images/uranus.jpg" alt="uranus" id="uranusthumb" onclick="PlanetsOff(); showUranus();">
+        <img src="../images/neptune.jpg" alt="neptune" id="neptunethumb" onclick="PlanetsOff(); showNeptune();">
+    </div>
+</div>
+</body>
+</html>
