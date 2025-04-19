@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="#maincontent" class="skip-link">Skip to content</a>
+
+    <nav>
+        <a href="index.html">Home</a><span> | </span>
+        <a href="skills.html">Skills</a><span> | </span>
+        <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+
+    <header>
+        <h1>Contact</h1>
+    </header>
+
+    <main id="maincontent">
+        <section class="row1">
+            <div class="col1">
+                <p><strong>Tina Shek</strong></p>
+                <p>Milton Hall</p>
+                <p><a href="mailto:tishek@syr.edu">tishek@syr.edu</a></p>
+            </div>
+            <div class="col2">
+                <p>
+                    <a href="https://www.linkedin.com/in/tina-shek-a243762b0/" target="_blank">
+                        <img src="../images/logo-sized.png" alt="LinkedIn Logo" style="vertical-align: middle; margin-right: 10px;">
+                        My LinkedIn Profile
+                    </a>
+                </p>
+            </div>
+        </section>
+
+        <section class="row2">
+            <div class="col1">
+                <h2>Contact Form</h2>
+                <form action="https://formspree.io/f/mvgzqazk" method="post">
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" required><br><br>
+
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+
+                    <label for="interest">Reason for Contact:</label><br>
+                    <select id="interest" name="interest">
+                        <option value="web-dev">Web Development</option>
+                        <option value="design">Design</option>
+                        <option value="other">Other</option>
+                    </select><br><br>
+
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+
+            <div class="col2">
+                <h2>Location</h2>
+                <iframe title="Milton Hall Location Map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2985950.5594115015!2d-81.0140473!3d43.0421186!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d9f34f899bbecb%3A0xccbbcc8c18495ac6!2sMilton%20Hall!5e0!3m2!1sen!2sus!4v1738276105882!5m2!1sen!2sus"
+                    style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <p>&copy; 2025</p>
+        <p class="float-right">"First, solve the problem. Then, write the code." – John Johnson</p>
+    </footer>
+</body>
+</html>
